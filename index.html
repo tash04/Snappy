@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snappy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Courgette&family=Hanalei+Fill&family=Marck+Script&family=Monoton&family=Poppins&family=Rubik:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/index.css">
+  </head>
+  <body>
+	
+    <main>
+     <header>
+        <div class="title">
+         <img src="icons/chatlogo.png" width="40px">
+         <h1>Snappy</h1>
+        </div>
+
+     <button type="button" onclick="show_hide()">
+       <img src="icons/hamburger.svg"  width="50px">
+      </button>
+
+     </header>
+
+    
+    <div class="container">
+      <div class="users-window">
+        <div class="users-head">
+          <h3>People</h3>
+          <h4 class="users-count">0</h4>
+        </div>
+        <div class="users-list">
+        </div>
+      </div>  
+   
+      <div class="chat-window">
+        <div class="chats">
+        </div>
+        <div class="user-input">
+          <input id="user-msg" type="text" placeholder="Type your message..">
+          <button id="user-send" type="button">SEND</button>
+        </div>
+      </div>
+
+    </div>
+ </main>
+
+<script>
+  var uwindow= document.querySelector('.users-window');
+ 
+  function show_hide(){
+    if(uwindow.style.display=="none"){
+      uwindow.style.display="block";
+    }
+    else{
+      uwindow.style.display= "none";
+    }
+  }
+</script>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/client.js"></script>
+  </body>
+</html>
